@@ -142,17 +142,21 @@
                 <span class="icons"><img src="src/marker.png"></img><p class="d">Chennai,India</p></span>
             </div>
             <div class="details">
-                <form action="">
+                <form id="contactForm" action="" onsubmit="return validateForm()">
                     <label for="name">Name</label>
-                    <input type="text">
+                    <input type="text" id="name" required>
+                    
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
+                    
                     <label for="message">Message</label>
-                    <textarea name="message" id="msg"></textarea>
-                    <button>
+                    <textarea name="message" id="msg" required></textarea>
+                    
+                    <button type="submit">
                         <span class="text">Submit</span>
                     </button>
                 </form>
+                <script src="script.js"></script> <!-- Link to your JS file -->
                 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
                 <script type="text/javascript">
                     (function(){
